@@ -1,0 +1,88 @@
+/* Стили для строки поиска */
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.search-container input {
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    transition: all 0.3s ease;
+    max-width: 345px;
+    font-size: 14px;
+    outline: none;
+}
+
+body.theme-dark .search-container input {
+    background-color: #1A1818;
+    background-image: url(../img/поиск.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: white;
+}
+
+body.theme-light .search-container input {
+    background-color: #E0E0E0;
+    background-image: url(../img/поиск.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: black;
+}
+
+.search-container input::placeholder {
+    color: #888;
+}
+
+body.theme-light .search-container input::placeholder {
+    color: #666;
+}
+
+.search-container button {
+    border-radius: 5px;
+    border: none;
+    width: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.theme-dark .search-container button {
+    background-color: #1A1818;
+}
+
+body.theme-light .search-container button {
+    background-color: #E0E0E0;
+}
+
+.search-container button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.search-container button img {
+    width: 20px;
+    height: 20px;
+}
+
+body.theme-light .search-container button img {
+    filter: invert(1);
+}
+
+@media (min-width: 768px) {
+    .search-container input {
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .search-container input {
+        max-width: 360px;
+    }
+}

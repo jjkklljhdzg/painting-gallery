@@ -1,0 +1,128 @@
+
+@font-face {
+    font-family: 'Inter';
+    /* Так как шрифты лежат в этой же папке styles, путь максимально простой! */
+    src: url('Inter-Regular.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant SC';
+    /* Так как шрифты лежат в этой же папке styles, путь максимально простой! */
+    src: url('CormorantSC-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Применение Cormorant SC для заголовков */
+.filter-group .lab label,
+.img-info-name p:first-child,
+.img-info-location p:first-child,
+.lab label,
+[style*="font-weight: 100"] {
+    font-family: 'Cormorant SC', 'Times New Roman', serif !important;
+}
+
+/* Применение Inter для всего остального */
+body,
+button,
+input,
+select,
+.img-info .num,
+.search-container input,
+.nav input,
+.sett,
+.btn-show,
+.btn-clear {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* ==========================================================================
+   Дальше пусть идет твой оригинальный код файла index.css без изменений...
+   ========================================================================== */
+
+:root {
+  --body-bg: #121212;
+  --text-main: #ffffff;
+  --accent: #AB8956;
+  --card-bg: #1A1818;
+  --pag-hover: rgba(128, 128, 128, 0.25);
+}
+
+body.theme-light {
+  --body-bg: #FFFFFF;
+  --text-main: #000000;
+  --accent: #9B4B4B;
+  --card-bg: #f5f5f5;
+  --pag-hover: rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--body-bg);
+  transition: background-color 0.3s ease;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+footer {
+  flex-shrink: 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Инверсия для светлой темы */
+body.theme-light .nav-button img,
+body.theme-light .search-container button img,
+body.theme-light .close-sett img {
+  filter: invert(1);
+}
+
+.theme-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}

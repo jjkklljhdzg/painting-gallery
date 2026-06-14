@@ -1,0 +1,43 @@
+/* src/fonts/fonts.css */
+
+/* Подключение шрифтов */
+@font-face {
+    font-family: 'Inter';
+    /* Просто имя файла, они лежат в одной папке! */
+    src: url('inter-8.woff2') format('woff2');
+    font-weight: 700; /* Явно говорим, что файл жирный */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant SC';
+    /* Просто имя файла, они лежат в одной папке! */
+    src: url('CormorantSC-Medium.woff2') format('woff2');
+    font-weight: 500; /* Явно говорим, что файл средний (Medium) */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Cormorant SC для заголовков и акцентных текстов (ваша оригинальная логика) */
+.filter-group .lab label,
+.img-info-name p:first-child,
+.img-info-location p:first-child,
+.lab label,
+[style*="font-weight: 100"] {
+    font-family: 'Cormorant SC', 'Times New Roman', serif !important;
+}
+
+/* Inter для всего остального (ваша оригинальная логика) */
+body,
+button,
+input,
+select,
+.img-info .num,
+.search-container input,
+.nav input,
+.sett,
+.btn-show,
+.btn-clear {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
