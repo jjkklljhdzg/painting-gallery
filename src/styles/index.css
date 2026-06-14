@@ -60,17 +60,25 @@ body.theme-light {
   --pag-hover: rgba(0, 0, 0, 0.1);
 }
 
+html {
+  /* Переносим переменную фона на самый-самый верхний уровень */
+  background-color: var(--body-bg); 
+}
+
 html, body {
-  height: 100%;
+  /* Заменяем жесткие 100% на динамическую высоту, чтобы мобильные панели не ломали фон */
+  min-height: 100dvh; 
   margin: 0;
   background-color: var(--body-bg);
-  transition: background-color 0.3s ease;
+  /* Ускоряем анимацию до 0.2s — на телефонах она перестанет отставать и лагать */
+  transition: background-color 0.2s ease;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* Тоже переводим на dvh, чтобы контент и футер четко вписывались в экран смартфона */
+  min-height: 100dvh;
 }
 
 header {

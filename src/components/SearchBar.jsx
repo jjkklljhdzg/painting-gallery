@@ -1,5 +1,5 @@
-import React from 'react'
-import '../styles/searchBar.css'
+import React from 'react';
+import '../styles/searchBar.css';
 
 function SearchBar({ searchQuery, onSearchChange, onOpenSettings }) {
   return (
@@ -11,10 +11,13 @@ function SearchBar({ searchQuery, onSearchChange, onOpenSettings }) {
         onChange={(e) => onSearchChange(e.target.value)}
       />
       <button id="setting" onClick={onOpenSettings}>
-        <img src="./img/настройки.svg" alt="Фильтры" />
+        <picture>
+          <source srcSet="./img/настройки Ч.svg" media="(prefers-color-scheme: light)" />
+          <img src="./img/настройки Б.svg" alt="Фильтры" />
+        </picture>
       </button>
     </div>
-  )
+  );
 }
 
-export default SearchBar
+export default SearchBar;
