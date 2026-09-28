@@ -2,7 +2,7 @@
   "name": "painting-gallery",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/jjkklljhdzg/painting-gallery", 
+  "homepage": "https://github.com/jjkklljhdzg/painting-gallery",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "web-vitals": "^6.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
